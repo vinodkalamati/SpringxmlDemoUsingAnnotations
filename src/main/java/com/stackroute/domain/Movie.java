@@ -6,18 +6,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class Movie {
 
-    @Autowired
+
     Actor actor;
 
-    @Autowired
-    public void setActor() {
-        actor.setName("Prabhas");
-        actor.setAge(46);
-        actor.setGender("Male");
+    public Movie(Actor actor) {
+        this.actor=actor;
+    }
+
+
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
     }
 
     public void getdetails() {
         System.out.println(
                 " actorName= " + actor.getName() +" age= "+actor.getAge()+" gender= "+actor.getGender());
+    }
+
+    @Override
+    public String toString() {
+        return "actor=" + actor.getName() + " age: "+actor.getAge() +" gender: "+actor.getGender();
     }
 }
