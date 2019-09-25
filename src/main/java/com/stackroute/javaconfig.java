@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,11 @@ import org.springframework.context.annotation.Scope;
 
 public class javaconfig {
 
+
+//    @Bean()
+//    public BeanLifecycleDemoBean lifecycle(){
+//        return
+//    }
     @Bean
     public Actor actor1(){
         return new Actor("Mahesh","Male",34);

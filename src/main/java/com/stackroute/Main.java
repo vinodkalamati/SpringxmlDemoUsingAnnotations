@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -22,11 +23,12 @@ public class Main {
 
 //        using ApplicationContext
         System.out.println("Using ApplicationContext");
-        ApplicationContext context=new AnnotationConfigApplicationContext(javaconfig.class);
+        AbstractApplicationContext context=new AnnotationConfigApplicationContext(javaconfig.class);
         Movie movie=context.getBean("movie3",Movie.class);
         movie.getdetails();
         Movie movie1=context.getBean("movie",Movie.class);
         movie1.getdetails();
+        context.registerShutdownHook();
 //        Movie movie2=context.getBean("movie2",Movie.class);
 //        movie2.getdetails();
 //        Movie movie3=context.getBean("movie3",Movie.class);
