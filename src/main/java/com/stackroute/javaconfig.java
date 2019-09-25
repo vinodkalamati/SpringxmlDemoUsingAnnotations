@@ -23,33 +23,33 @@ public class javaconfig {
         return new Actor("Charan","Male",26);
     }
 
-    @Bean
-    public Actor actor2(){
-        return new Actor("Samantha","female",34);
-    }
-
-    @Bean
-    public Actor actor3(){
-        return new Actor("Charan","Male",26);
-    }
+//    @Bean
+//    public Actor actor2(){
+//        return new Actor("Samantha","female",34);
+//    }
+//
+//    @Bean
+//    public Actor actor3(){
+//        return new Actor("Charan","Male",26);
+//    }
 
     @Bean
     public Movie movie3(){
-        return new Movie(actor3());
+        return new Movie(actor1());
     }
 
     @Bean
     public Movie movie(){
         return new Movie(actor());
     }
-    @Bean
-    public Movie movie1(){
-        return new Movie(actor1());
-    }
-
-    @Bean
-    public Movie movie2(){
-        return new Movie(actor2());
-    }
+//    @Bean
+//    public Movie movie1(){
+//        return new Movie(actor1());
+//    }
+//
+//    @Bean
+//    public Movie movie2(){
+//        return new Movie(actor2());
+//    }
 }
 
