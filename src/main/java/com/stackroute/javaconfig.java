@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 @ComponentScan("com.stackroute")
-@Scope("prototype")
+@Scope
 
 public class javaconfig {
 
@@ -47,7 +47,9 @@ public class javaconfig {
         return new Movie(actor1());
     }
 
-    @Bean
+
+    @Bean(name = {"MovieA","MovieB"})
+    @Scope("prototype")
     public Movie movie2(){
         return new Movie(actor2());
     }
