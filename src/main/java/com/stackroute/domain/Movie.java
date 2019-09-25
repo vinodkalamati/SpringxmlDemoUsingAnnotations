@@ -9,6 +9,8 @@ public class Movie {
 
     Actor actor;
 
+//    Autowire ByType by default if we dont specify index
+    @Autowired
     public Movie(Actor actor) {
         this.actor=actor;
     }

@@ -25,13 +25,13 @@ public class Main {
         ApplicationContext context=new AnnotationConfigApplicationContext(javaconfig.class);
         Movie movie=context.getBean("movie1",Movie.class);
         movie.getdetails();
-        Movie movie1=context.getBean("movie",Movie.class);
-        movie1.getdetails();
-        Movie movie2=context.getBean("movie2",Movie.class);
-        movie2.getdetails();
-        Movie movie3=context.getBean("movie3",Movie.class);
-        movie3.getdetails();
-        System.out.println(movie1==movie3);
+//        Movie movie1=context.getBean("movie",Movie.class);
+//        movie1.getdetails();
+//        Movie movie2=context.getBean("movie2",Movie.class);
+//        movie2.getdetails();
+//        Movie movie3=context.getBean("movie3",Movie.class);
+//        movie3.getdetails();
+//        System.out.println(movie1==movie3);
 
 
     }
